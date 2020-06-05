@@ -7,14 +7,39 @@
 //
 
 import UIKit
+import Lottie
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var logButton: UIButton!
+    
+    var animationView:AnimationView = AnimationView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // animationを実行
+        animation()
     }
+    @IBAction func start(_ sender: Any) {
+        
+    }
+    
+    @IBAction func log(_ sender: Any) {
+    }
+    
 
-
+    func animation(){
+        let animation = Animation.named("beer")
+        animationView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
+        animationView.animation = animation
+        animationView.contentMode = .scaleAspectFit
+        // 一度だけ、アニメーションを実行
+        animationView.loopMode = .autoReverse
+        animationView.backgroundColor = .clear
+        view.addSubview(animationView)
+        animationView.play()
+    }
 }
 

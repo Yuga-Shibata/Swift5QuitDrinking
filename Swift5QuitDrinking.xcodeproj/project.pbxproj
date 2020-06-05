@@ -3,19 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65E10EDD26558B2EB2E616AC /* Pods_Swift5QuitDrinking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1824379601B156043768734A /* Pods_Swift5QuitDrinking.framework */; };
 		829712222489CD7B00CDA2F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829712212489CD7B00CDA2F9 /* AppDelegate.swift */; };
 		829712242489CD7B00CDA2F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829712232489CD7B00CDA2F9 /* SceneDelegate.swift */; };
 		829712262489CD7B00CDA2F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829712252489CD7B00CDA2F9 /* ViewController.swift */; };
 		829712292489CD7B00CDA2F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 829712272489CD7B00CDA2F9 /* Main.storyboard */; };
 		8297122B2489CD7C00CDA2F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8297122A2489CD7C00CDA2F9 /* Assets.xcassets */; };
 		8297122E2489CD7C00CDA2F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8297122C2489CD7C00CDA2F9 /* LaunchScreen.storyboard */; };
+		829712362489DC9200CDA2F9 /* beer.json in Resources */ = {isa = PBXBuildFile; fileRef = 829712352489DC9200CDA2F9 /* beer.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		061A356143EF93568FAC23DE /* Pods-Swift5QuitDrinking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5QuitDrinking.release.xcconfig"; path = "Target Support Files/Pods-Swift5QuitDrinking/Pods-Swift5QuitDrinking.release.xcconfig"; sourceTree = "<group>"; };
+		1824379601B156043768734A /* Pods_Swift5QuitDrinking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift5QuitDrinking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65DCA97FCC1EC6475CD19E14 /* Pods-Swift5QuitDrinking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5QuitDrinking.debug.xcconfig"; path = "Target Support Files/Pods-Swift5QuitDrinking/Pods-Swift5QuitDrinking.debug.xcconfig"; sourceTree = "<group>"; };
 		8297121E2489CD7B00CDA2F9 /* Swift5QuitDrinking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift5QuitDrinking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		829712212489CD7B00CDA2F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		829712232489CD7B00CDA2F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		8297122A2489CD7C00CDA2F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8297122D2489CD7C00CDA2F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8297122F2489CD7C00CDA2F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		829712352489DC9200CDA2F9 /* beer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = beer.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E10EDD26558B2EB2E616AC /* Pods_Swift5QuitDrinking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25E6FD3920FA0FD5FF606123 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				65DCA97FCC1EC6475CD19E14 /* Pods-Swift5QuitDrinking.debug.xcconfig */,
+				061A356143EF93568FAC23DE /* Pods-Swift5QuitDrinking.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		829712152489CD7B00CDA2F9 = {
 			isa = PBXGroup;
 			children = (
 				829712202489CD7B00CDA2F9 /* Swift5QuitDrinking */,
 				8297121F2489CD7B00CDA2F9 /* Products */,
+				25E6FD3920FA0FD5FF606123 /* Pods */,
+				C032961585A162F302BF6CDF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +77,21 @@
 				829712212489CD7B00CDA2F9 /* AppDelegate.swift */,
 				829712232489CD7B00CDA2F9 /* SceneDelegate.swift */,
 				829712252489CD7B00CDA2F9 /* ViewController.swift */,
+				829712352489DC9200CDA2F9 /* beer.json */,
 				829712272489CD7B00CDA2F9 /* Main.storyboard */,
 				8297122A2489CD7C00CDA2F9 /* Assets.xcassets */,
 				8297122C2489CD7C00CDA2F9 /* LaunchScreen.storyboard */,
 				8297122F2489CD7C00CDA2F9 /* Info.plist */,
 			);
 			path = Swift5QuitDrinking;
+			sourceTree = "<group>";
+		};
+		C032961585A162F302BF6CDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1824379601B156043768734A /* Pods_Swift5QuitDrinking.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 829712322489CD7C00CDA2F9 /* Build configuration list for PBXNativeTarget "Swift5QuitDrinking" */;
 			buildPhases = (
+				1DD963A73C357573DFCBAE68 /* [CP] Check Pods Manifest.lock */,
 				8297121A2489CD7B00CDA2F9 /* Sources */,
 				8297121B2489CD7B00CDA2F9 /* Frameworks */,
 				8297121C2489CD7B00CDA2F9 /* Resources */,
+				29B17AF3DC8233C325EFE110 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,10 +157,53 @@
 				8297122E2489CD7C00CDA2F9 /* LaunchScreen.storyboard in Resources */,
 				8297122B2489CD7C00CDA2F9 /* Assets.xcassets in Resources */,
 				829712292489CD7B00CDA2F9 /* Main.storyboard in Resources */,
+				829712362489DC9200CDA2F9 /* beer.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DD963A73C357573DFCBAE68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Swift5QuitDrinking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29B17AF3DC8233C325EFE110 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swift5QuitDrinking/Pods-Swift5QuitDrinking-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swift5QuitDrinking/Pods-Swift5QuitDrinking-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swift5QuitDrinking/Pods-Swift5QuitDrinking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8297121A2489CD7B00CDA2F9 /* Sources */ = {
@@ -168,6 +240,7 @@
 /* Begin XCBuildConfiguration section */
 		829712302489CD7C00CDA2F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65DCA97FCC1EC6475CD19E14 /* Pods-Swift5QuitDrinking.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -228,6 +301,7 @@
 		};
 		829712312489CD7C00CDA2F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 061A356143EF93568FAC23DE /* Pods-Swift5QuitDrinking.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -282,6 +356,7 @@
 		};
 		829712332489CD7C00CDA2F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65DCA97FCC1EC6475CD19E14 /* Pods-Swift5QuitDrinking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +374,7 @@
 		};
 		829712342489CD7C00CDA2F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 061A356143EF93568FAC23DE /* Pods-Swift5QuitDrinking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
