@@ -20,9 +20,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // animationを実行
-        animation()
+//        animation()
     }
     @IBAction func start(_ sender: Any) {
+        // 画面遷移をする
+        //performSegue(withIdentifier: "next", sender: nil)
+        let nextVC = storyboard?.instantiateViewController(identifier: "quit") as! QuitViewController
+        navigationController?
+            .pushViewController(nextVC, animated: true)
         
     }
     
@@ -32,7 +37,7 @@ class ViewController: UIViewController {
 
     func animation(){
         let animation = Animation.named("beer")
-        animationView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
+        animationView.frame = CGRect(x: 0, y: (view.frame.size.height / 5) * -1, width: view.frame.size.width, height: view.frame.size.height)
         animationView.animation = animation
         animationView.contentMode = .scaleAspectFit
         // 一度だけ、アニメーションを実行

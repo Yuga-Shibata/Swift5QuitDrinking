@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		65E10EDD26558B2EB2E616AC /* Pods_Swift5QuitDrinking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1824379601B156043768734A /* Pods_Swift5QuitDrinking.framework */; };
+		825BB1A62489F7CD00121515 /* QuitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825BB1A52489F7CD00121515 /* QuitViewController.swift */; };
 		829712222489CD7B00CDA2F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829712212489CD7B00CDA2F9 /* AppDelegate.swift */; };
 		829712242489CD7B00CDA2F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829712232489CD7B00CDA2F9 /* SceneDelegate.swift */; };
 		829712262489CD7B00CDA2F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829712252489CD7B00CDA2F9 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 		061A356143EF93568FAC23DE /* Pods-Swift5QuitDrinking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5QuitDrinking.release.xcconfig"; path = "Target Support Files/Pods-Swift5QuitDrinking/Pods-Swift5QuitDrinking.release.xcconfig"; sourceTree = "<group>"; };
 		1824379601B156043768734A /* Pods_Swift5QuitDrinking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift5QuitDrinking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65DCA97FCC1EC6475CD19E14 /* Pods-Swift5QuitDrinking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5QuitDrinking.debug.xcconfig"; path = "Target Support Files/Pods-Swift5QuitDrinking/Pods-Swift5QuitDrinking.debug.xcconfig"; sourceTree = "<group>"; };
+		825BB1A52489F7CD00121515 /* QuitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitViewController.swift; sourceTree = "<group>"; };
 		8297121E2489CD7B00CDA2F9 /* Swift5QuitDrinking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift5QuitDrinking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		829712212489CD7B00CDA2F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		829712232489CD7B00CDA2F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				8297122A2489CD7C00CDA2F9 /* Assets.xcassets */,
 				8297122C2489CD7C00CDA2F9 /* LaunchScreen.storyboard */,
 				8297122F2489CD7C00CDA2F9 /* Info.plist */,
+				825BB1A52489F7CD00121515 /* QuitViewController.swift */,
 			);
 			path = Swift5QuitDrinking;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				829712262489CD7B00CDA2F9 /* ViewController.swift in Sources */,
+				825BB1A62489F7CD00121515 /* QuitViewController.swift in Sources */,
 				829712222489CD7B00CDA2F9 /* AppDelegate.swift in Sources */,
 				829712242489CD7B00CDA2F9 /* SceneDelegate.swift in Sources */,
 			);
