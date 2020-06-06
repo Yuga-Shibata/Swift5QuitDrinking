@@ -16,6 +16,8 @@
 		8297122B2489CD7C00CDA2F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8297122A2489CD7C00CDA2F9 /* Assets.xcassets */; };
 		8297122E2489CD7C00CDA2F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8297122C2489CD7C00CDA2F9 /* LaunchScreen.storyboard */; };
 		829712362489DC9200CDA2F9 /* beer.json in Resources */ = {isa = PBXBuildFile; fileRef = 829712352489DC9200CDA2F9 /* beer.json */; };
+		82BD804C248A4054003CC014 /* LoggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BD804B248A4054003CC014 /* LoggingViewController.swift */; };
+		82BD804E248A41BE003CC014 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BD804D248A41BE003CC014 /* LogViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		8297122D2489CD7C00CDA2F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8297122F2489CD7C00CDA2F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		829712352489DC9200CDA2F9 /* beer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = beer.json; sourceTree = "<group>"; };
+		82BD804B248A4054003CC014 /* LoggingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingViewController.swift; sourceTree = "<group>"; };
+		82BD804D248A41BE003CC014 /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,11 +84,13 @@
 				829712232489CD7B00CDA2F9 /* SceneDelegate.swift */,
 				829712252489CD7B00CDA2F9 /* ViewController.swift */,
 				829712352489DC9200CDA2F9 /* beer.json */,
+				825BB1A52489F7CD00121515 /* QuitViewController.swift */,
 				829712272489CD7B00CDA2F9 /* Main.storyboard */,
+				82BD804D248A41BE003CC014 /* LogViewController.swift */,
+				82BD804B248A4054003CC014 /* LoggingViewController.swift */,
 				8297122A2489CD7C00CDA2F9 /* Assets.xcassets */,
 				8297122C2489CD7C00CDA2F9 /* LaunchScreen.storyboard */,
 				8297122F2489CD7C00CDA2F9 /* Info.plist */,
-				825BB1A52489F7CD00121515 /* QuitViewController.swift */,
 			);
 			path = Swift5QuitDrinking;
 			sourceTree = "<group>";
@@ -214,7 +220,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				829712262489CD7B00CDA2F9 /* ViewController.swift in Sources */,
+				82BD804C248A4054003CC014 /* LoggingViewController.swift in Sources */,
 				825BB1A62489F7CD00121515 /* QuitViewController.swift in Sources */,
+				82BD804E248A41BE003CC014 /* LogViewController.swift in Sources */,
 				829712222489CD7B00CDA2F9 /* AppDelegate.swift in Sources */,
 				829712242489CD7B00CDA2F9 /* SceneDelegate.swift in Sources */,
 			);

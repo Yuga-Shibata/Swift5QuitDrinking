@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aM0-Zh-0fI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -22,11 +22,13 @@
                                 <state key="normal" title="start"/>
                                 <connections>
                                     <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U1i-wl-384"/>
+                                    <segue destination="Aua-CA-lD1" kind="presentation" identifier="quit" id="eTZ-Gn-UGw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iy-83-ser">
-                                <rect key="frame" x="192" y="703" width="31" height="30"/>
+                                <rect key="frame" x="55" y="703" width="305" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="記録"/>
                                 <connections>
                                     <action selector="log:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QTr-z1-uk0"/>
@@ -36,6 +38,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="MSM-9Q-pbQ"/>
                     <connections>
                         <outlet property="logButton" destination="8iy-83-ser" id="GJh-gD-fJR"/>
                         <outlet property="startButton" destination="yq6-z2-d4c" id="FEY-7G-P8B"/>
@@ -43,12 +46,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="431.8840579710145" y="-536.38392857142856"/>
+            <point key="canvasLocation" x="1342.0289855072465" y="-536.38392857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Log View Controller-->
         <scene sceneID="ilu-sa-zc1">
             <objects>
-                <viewController id="RmI-N9-3Iu" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="log" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RmI-N9-3Iu" customClass="LogViewController" customModule="Swift5QuitDrinking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4La-HT-2ty">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,53 +63,10 @@
             </objects>
             <point key="canvasLocation" x="61" y="157"/>
         </scene>
-        <!--Quit View Controller-->
-        <scene sceneID="Pmz-gX-dsY">
-            <objects>
-                <viewController storyboardIdentifier="quit" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7lJ-Md-hGS" customClass="QuitViewController" customModule="Swift5QuitDrinking" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="EZ9-v0-1xK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconfinder_beer_299039" translatesAutoresizingMaskIntoConstraints="NO" id="zfR-ck-mos">
-                                <rect key="frame" x="62" y="624" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="▲アイコンをタップ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0CB-Wp-p4c">
-                                <rect key="frame" x="131" y="438" width="152" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z14-LP-SGf">
-                                <rect key="frame" x="82" y="153" width="250" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="EZp-xj-1Q4"/>
-                                    <constraint firstAttribute="width" constant="300" id="Szz-cU-iSQ"/>
-                                </constraints>
-                                <state key="normal" image="quit"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="禁酒する" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OoW-hP-7mw">
-                                <rect key="frame" x="82" y="86" width="250" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="eT8-l7-CUW"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bOG-RL-0ES" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="813.04347826086962" y="163.39285714285714"/>
-        </scene>
-        <!--View Controller-->
+        <!--Logging View Controller-->
         <scene sceneID="rCD-RY-hq7">
             <objects>
-                <viewController id="I49-xV-LeJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="logging" useStoryboardIdentifierAsRestorationIdentifier="YES" id="I49-xV-LeJ" customClass="LoggingViewController" customModule="Swift5QuitDrinking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yab-oS-3aS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,22 +76,78 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iNa-Cg-Stq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1490" y="163"/>
+            <point key="canvasLocation" x="1470" y="157"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="WC8-Qs-kCS">
+        <!--Navigation Controller-->
+        <scene sceneID="Oux-ie-tX4">
             <objects>
-                <viewController id="Kn9-Pi-k91" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eLV-I6-UgO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aM0-Zh-0fI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f18-Vb-MhA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cy4-Zm-gi5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8B2-2U-ggc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1342" y="-1239"/>
+        </scene>
+        <!--Quit View Controller-->
+        <scene sceneID="5ZX-fu-HUk">
+            <objects>
+                <viewController storyboardIdentifier="quit" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Aua-CA-lD1" customClass="QuitViewController" customModule="Swift5QuitDrinking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1CN-nR-36d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="▲アイコンをタップ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGn-Zc-dWD">
+                                <rect key="frame" x="124" y="438" width="152" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3g-Mk-JE3">
+                                <rect key="frame" x="75" y="153" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="BDC-Mq-dmk"/>
+                                    <constraint firstAttribute="width" constant="300" id="yUw-FN-aws"/>
+                                </constraints>
+                                <state key="normal" image="quit"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="禁酒する" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEX-O1-07A">
+                                <rect key="frame" x="75" y="86" width="250" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconfinder_beer_299039" translatesAutoresizingMaskIntoConstraints="NO" id="EdS-7o-qj6">
+                                <rect key="frame" x="80" y="702" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcM-63-bjf">
+                                <rect key="frame" x="124" y="569" width="152" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="結果を確認する"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLT-8l-Gzs">
+                                <rect key="frame" x="20" y="44" width="70" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="◀Back"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="WJx-9v-ZKR"/>
+                        <viewLayoutGuide key="safeArea" id="dCI-OC-d7j"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SCl-6d-j9H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wpf-12-t7h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2196" y="163"/>
+            <point key="canvasLocation" x="774" y="157"/>
         </scene>
     </scenes>
     <resources>
