@@ -7,14 +7,57 @@
 //
 
 import UIKit
+import WCLShineButton
 
 class QuitViewController: UIViewController {
-
+    
+    @IBOutlet weak var message: UILabel!
+    @IBOutlet weak var beerImage: WCLShineButton!
+    @IBOutlet weak var nextButton: UIButton!
+    
+    var flag = false
+    var back = false
+    var timer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // ボタンのパラメータ
+        parameter()
+        // messageラベルの文字がはみ出ないように折り返し
+        message.lineBreakMode = .byCharWrapping
+        
+        // nextButtonを押せなくする
+        nextButton.isEnabled = false
+        // nextButtonを半透明にする
+        nextButton.alpha = 0.5
         
     }
     
-
+    @IBAction func tap(_ sender: Any) {
+        beerImage.isEnabled = false
+        message.font = .boldSystemFont(ofSize: 30)
+        message.text = "Good job!"
+        message.textColor = .orange
+        nextButton.isEnabled = true
+        nextButton.alpha = 1.0
+    }
+    
+   
+    
+    
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    // ぱらめーた
+    func parameter(){
+        var param = WCLShineParams()
+        let beer = UIImage(named: "beer3")
+        param.enableFlashing = true
+        param.animDuration = 2
+        beerImage.params = param
+        beerImage.image = .custom(beer!)
+    }
+    
+    
+    
 }

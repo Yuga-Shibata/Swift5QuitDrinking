@@ -1,16 +1,26 @@
 PODS:
+  - Charts (3.5.0):
+    - Charts/Core (= 3.5.0)
+  - Charts/Core (3.5.0)
   - lottie-ios (3.1.8)
+  - WCLShineButton (1.0.8)
 
 DEPENDENCIES:
+  - Charts
   - lottie-ios
+  - WCLShineButton
 
 SPEC REPOS:
   trunk:
+    - Charts
     - lottie-ios
+    - WCLShineButton
 
 SPEC CHECKSUMS:
+  Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
   lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
+  WCLShineButton: 315ee9b0024b1cc56dba34fb6a8878937eb8d0b1
 
-PODFILE CHECKSUM: f42fdf027b3bf7f3c425b92a394ff173847d98b5
+PODFILE CHECKSUM: 6a921dc8d1bc26f34dff5f9905f6c5d60460a905
 
 COCOAPODS: 1.9.2

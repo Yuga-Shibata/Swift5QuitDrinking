@@ -7,5 +7,7 @@ target 'Swift5QuitDrinking' do
 
   # Pods for Swift5QuitDrinking
 pod 'lottie-ios'
+pod 'WCLShineButton'
+pod 'Charts'
 
 end

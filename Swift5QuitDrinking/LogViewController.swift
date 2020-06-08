@@ -7,24 +7,24 @@
 //
 
 import UIKit
+import Charts
 
 class LogViewController: UIViewController {
 
+    @IBOutlet weak var BarChartView: BarChartView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let rawData: [Int] = [20, 50, 70, 30, 60, 90, 40, 120]
+        let entries = rawData.enumerated().map { BarChartDataEntry(x: Double($0.offset), y: Double($0.element)) }
+        let dataSet = BarChartDataSet(entries: entries)
+        let data = BarChartData(dataSet: dataSet)
+        BarChartView.data = data
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
-    */
-
+    
 }

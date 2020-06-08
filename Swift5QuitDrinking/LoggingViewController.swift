@@ -9,22 +9,23 @@
 import UIKit
 
 class LoggingViewController: UIViewController {
-
+    @IBOutlet weak var homeButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//            let backVC = segue.destination as! QuitViewController
+//            backVC.back = true
+//            print("成功")
+//        }
         // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
+    @IBAction func home(_ sender: Any) {
+        // 2つ前の画面に戻る
+        self.dismiss(animated: true, completion: nil)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
-
+    
+    
 }
