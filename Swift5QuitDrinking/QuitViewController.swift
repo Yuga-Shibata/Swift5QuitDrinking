@@ -34,12 +34,7 @@ class QuitViewController: UIViewController {
     }
     
     @IBAction func tap(_ sender: Any) {
-        beerImage.isEnabled = false
-        message.font = .boldSystemFont(ofSize: 30)
-        message.text = "Good job!"
-        message.textColor = .orange
-        nextButton.isEnabled = true
-        nextButton.alpha = 1.0
+        action()
     }
     
    
@@ -56,6 +51,16 @@ class QuitViewController: UIViewController {
         param.animDuration = 2
         beerImage.params = param
         beerImage.image = .custom(beer!)
+    }
+    
+    // ビールのアイコンをタップした後の処理
+    func action(){
+        beerImage.isEnabled = false
+        message.font = .boldSystemFont(ofSize: 30)
+        message.text = "Good job!"
+        message.textColor = .orange
+        nextButton.isEnabled = true
+        nextButton.alpha = 1.0
     }
     
     

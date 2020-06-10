@@ -21,10 +21,12 @@ class LogViewController: UIViewController {
         let dataSet = BarChartDataSet(entries: entries)
         let data = BarChartData(dataSet: dataSet)
         BarChartView.data = data
-    }
-    
-    @IBAction func back(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        
+        // 幅・高さを設定
+        BarChartView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
+        
+        // 背景色を変更
+        BarChartView.backgroundColor = .white
     }
     
 }
