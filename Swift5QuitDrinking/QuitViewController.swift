@@ -20,6 +20,7 @@ class QuitViewController: UIViewController {
     var timer = Timer()
     //  userDefaultsの定義
     var userDefaults = UserDefaults.standard
+    var buffer = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,7 @@ class QuitViewController: UIViewController {
         // データを追加
         var addedData =  addData()
         print("追加後の配列:", addedData)
+        print("配列の最後", addedData.last!)
         let text =  addedData.joined()
     }
     
@@ -115,5 +117,56 @@ class QuitViewController: UIViewController {
     }
     
     
+    func initCount() -> Int{
+        // UserDefaultsの参照
+        let userDefaults = UserDefaults.standard
+
+        // sampleというキーで値「aiueo」を保存する
+        userDefaults.set(0, forKey: "Count")
+        // UserDefaultsへの値の保存を明示的に行う
+        userDefaults.synchronize()
+
+        // Countというキーを指定して保存していたint型の値を取り出す
+            var integer: Int! = UserDefaults.standard.integer(forKey: "Count")
+        var unWrap = (integer!)
+
+            print("アンラップできてるかな？" ,integer)
+        return unWrap
+        }
     
-}
+    
+    
+    func addCount() -> Int{
+        // userDefaultsに保存された値の取得
+        var buffer = UserDefaults.standard.integer(forKey: "Count")
+        // 一度も実行していないなら
+        if buffer == Optional(0) {
+            buffer = initCount()
+            buffer += 1
+            // 追加したデータを保存
+            userDefaults.set(buffer, forKey: "Count")
+            print("initCount()を実行♪")
+        } else if buffer >= 1 {
+            // Countというキーを指定して保存していたint型の値を取り出す
+            var integer: Int! = UserDefaults.standard.integer(forKey: "Count")
+            var unWrap = integer
+            buffer = unWrap!
+            buffer += 1
+            // 追加したデータを保存
+            userDefaults.set(buffer, forKey: "Count")
+            }
+        return buffer
+        }
+        
+
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! LoggingViewController
+        let LoaclCount = addCount()
+        nextVC.logCount = LoaclCount
+        }
+    
+    
+    }
+

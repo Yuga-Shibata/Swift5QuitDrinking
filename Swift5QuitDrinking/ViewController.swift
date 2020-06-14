@@ -13,18 +13,26 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var logButton: UIButton!
+    @IBOutlet weak var countLabel: UILabel!
     
+    var userDefaults = UserDefaults.standard
     var animationView:AnimationView = AnimationView()
+    var HomeCount = Int()
+    
+    @IBOutlet weak var dayLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // animationを実行
 //        animation()
+       
     }
     // 他のビューから戻ってきたときにも処理を行う
     override func viewWillAppear(_ animated: Bool) {
         animation()
+        addCount()
+        addData()
     }
     
     @IBAction func start(_ sender: Any) {
@@ -32,10 +40,7 @@ class ViewController: UIViewController {
 //        seni()
         
     }
-    
-    @IBAction func log(_ sender: Any) {
-        
-    }
+
     
     // 画面遷移をする
     func seni(){
@@ -61,5 +66,37 @@ class ViewController: UIViewController {
 //        animationView.sendSubviewToBack(startButton)
         startButton.bringSubviewToFront(animationView)
     }
-}
+    
+    
+    func addCount(){
+        // userDefaultsに保存された値の取得
+        var buffer = UserDefaults.standard.integer(forKey: "Count")
+        // 一度も実行していないなら
+        if buffer == Optional(0) {
+            countLabel.text = "---"
+        } else if buffer >= 1 {
+            // Countというキーを指定して保存していたint型の値を取り出す
+            var integer: Int! = UserDefaults.standard.integer(forKey: "Count")
+            var unWrap = integer
+            buffer = unWrap!
+            countLabel.text = String(buffer)
+            }
+        }
+    
+    
+    func addData(){
+        // userDefaultsに保存された値の取得
+        var getMaxSpeed:[[String]]! = userDefaults.array(forKey: "userDate") as! [[String]]?
+        
+        // 一度も実行していない（配列が作成されていなかった）なら
+        if getMaxSpeed == nil {
+            print("initList()を実行♪")
+            dayLabel.text = "---"
+        } else {
+            dayLabel.text = getMaxSpeed.last?.last
+        }
+    }
+    
 
+
+}

@@ -9,7 +9,13 @@
 import UIKit
 
 class LoggingViewController: UIViewController {
+    
+    
     @IBOutlet weak var homeButton: UIButton!
+    @IBOutlet weak var countLabel: UILabel!
+    
+    var logCount = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +25,7 @@ class LoggingViewController: UIViewController {
 //            print("成功")
 //        }
         // Do any additional setup after loading the view.
+        countLabel.text = String(logCount)
     }
 
     @IBAction func home(_ sender: Any) {
