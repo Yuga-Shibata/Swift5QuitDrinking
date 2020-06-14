@@ -18,6 +18,8 @@ class QuitViewController: UIViewController {
     var flag = false
     var back = false
     var timer = Timer()
+    //  userDefaultsの定義
+    var userDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,10 @@ class QuitViewController: UIViewController {
     
     @IBAction func tap(_ sender: Any) {
         action()
+        // データを追加
+        var addedData =  addData()
+        print("追加後の配列:", addedData)
+        let text =  addedData.joined()
     }
     
    
@@ -61,6 +67,51 @@ class QuitViewController: UIViewController {
         message.textColor = .orange
         nextButton.isEnabled = true
         nextButton.alpha = 1.0
+    }
+    
+    func initList() -> Array<Array<String>>{
+        // userDefaultsに格納したい値
+        var newData = getDate()
+        var data:[[String]] = [[newData]]
+        // 配列の保存
+        userDefaults.set(data, forKey: "userDate")
+        let getMaxSpeed:[[String]] = userDefaults.array(forKey: "userDate") as! [[String]]
+        return getMaxSpeed
+    }
+    
+    
+    func addData() -> Array<Array<String>>{
+        // userDefaultsに保存された値の取得
+        var getMaxSpeed:[[String]]! = userDefaults.array(forKey: "userDate") as! [[String]]?
+        
+        // 一度も実行していない（配列が作成されていなかった）なら
+        if getMaxSpeed == nil {
+            initList()
+            getMaxSpeed = userDefaults.array(forKey: "userDate") as! [[String]]?
+            print("initList()を実行♪")
+        } else {
+            let string = String(describing: getMaxSpeed)
+            // 値の追加
+            var nowData = getDate()
+            var DATA:[[String]] = [[nowData]]
+            print(type(of: DATA))
+            getMaxSpeed.append(contentsOf: DATA)
+            // 追加したデータを保存
+            userDefaults.set(getMaxSpeed, forKey: "userDate")
+        }
+        return getMaxSpeed
+    }
+    
+    
+    // 日付を取得する
+    func getDate() -> String{
+        let dt = Date()
+        let dateformatter = DateFormatter()
+        // 書式とロケールを設定
+        dateformatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMd", options: 0, locale: Locale(identifier: "ja_JP"))
+        // 文字列型に変換
+        let str = dateformatter.string(from: dt)
+        return str
     }
     
     

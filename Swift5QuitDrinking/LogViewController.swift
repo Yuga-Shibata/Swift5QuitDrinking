@@ -29,4 +29,6 @@ class LogViewController: UIViewController {
         BarChartView.backgroundColor = .white
     }
     
+    
+    
 }
