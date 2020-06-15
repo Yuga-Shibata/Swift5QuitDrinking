@@ -115,30 +115,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="　千里の道も一歩から。この調子で習慣を継続していきましょう！" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Mr4-k1-Tfv">
-                                <rect key="frame" x="80" y="312" width="240" height="86"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="よく頑張りましたね！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WdV-3W-Dok">
+                                <rect key="frame" x="87" y="240" width="240" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="よく頑張りましたね！" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ye7-X4-mHb">
-                                <rect key="frame" x="80" y="220" width="240" height="43"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="よく頑張りましたね！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUl-dA-eEl">
+                                <rect key="frame" x="87" y="452" width="240" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="過剰なアルコールの摂取は、消化器官、循環器系、脳、抹消神経などの臓器へと影響を及ぼすことがあります。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xo3-yH-23B">
-                                <rect key="frame" x="87" y="447" width="240" height="134"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="よく頑張りましたね！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9B-Wv-6ct">
+                                <rect key="frame" x="-710" y="316" width="1834" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="D79-jj-HEV"/>
@@ -146,9 +143,9 @@
                     <connections>
                         <outlet property="backButton" destination="0cP-ig-dwb" id="BpV-y8-4ge"/>
                         <outlet property="countLabel" destination="h6c-VV-8cm" id="pJW-rQ-3cb"/>
-                        <outlet property="message" destination="Ye7-X4-mHb" id="Xf3-LL-dux"/>
-                        <outlet property="message2" destination="Mr4-k1-Tfv" id="BA9-zK-sAp"/>
-                        <outlet property="message3" destination="Xo3-yH-23B" id="USO-J5-1qW"/>
+                        <outlet property="message" destination="WdV-3W-Dok" id="rIO-m2-8Wa"/>
+                        <outlet property="message2" destination="Z9B-Wv-6ct" id="Sn9-RG-8Uc"/>
+                        <outlet property="message3" destination="vUl-dA-eEl" id="naL-Vj-UWb"/>
                         <outlet property="quitCount" destination="aXy-dT-XHY" id="xlD-PG-yTJ"/>
                     </connections>
                 </viewController>

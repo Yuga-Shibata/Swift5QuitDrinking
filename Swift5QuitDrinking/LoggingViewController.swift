@@ -13,9 +13,9 @@ class LoggingViewController: UIViewController {
     
     @IBOutlet weak var quitCount: UILabel!
     @IBOutlet weak var countLabel: UILabel!
-    @IBOutlet weak var message: UITextView!
-    @IBOutlet weak var message2: UITextView!
-    @IBOutlet weak var message3: UITextView!
+    @IBOutlet weak var message: UILabel!
+    @IBOutlet weak var message2: UILabel!
+    @IBOutlet weak var message3: UILabel!
     @IBOutlet weak var backButton: UIButton!
     
     var logCount = 0
@@ -25,6 +25,7 @@ class LoggingViewController: UIViewController {
         super.viewDidLoad()
         countLabel.text = String(logCount)
         responsive()
+        insertText()
     }
 
     @IBAction func home(_ sender: Any) {
@@ -33,7 +34,13 @@ class LoggingViewController: UIViewController {
 
     }
     
-    
+    func insertText(){
+        message2.numberOfLines = 2
+        message2.text = "　千里の道も一歩から。\nこの調子で習慣を継続していきましょう！"
+        
+        message3.numberOfLines = 5
+        message3.text = "過剰なアルコールの摂取\nは、消化器官、循環器系、\n脳、抹消神経などの\n臓器へと影響を及ぼす\nことがあります。"
+    }
     
     
     // レスポンシブ化
