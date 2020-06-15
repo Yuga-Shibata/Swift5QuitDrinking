@@ -26,23 +26,15 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="　禁酒する！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCv-3B-0Rc">
-                                <rect key="frame" x="107" y="812" width="200" height="50"/>
+                                <rect key="frame" x="107" y="826" width="200" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niz-Xz-9V9">
-                                <rect key="frame" x="202" y="521" width="192" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="最後に禁酒した日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPw-30-3un">
-                                <rect key="frame" x="20" y="521" width="156" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="最後に禁酒した日" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPw-30-3un">
+                                <rect key="frame" x="20" y="523" width="156" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -50,7 +42,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyy-fF-MeI">
-                                <rect key="frame" x="202" y="559" width="192" height="28"/>
+                                <rect key="frame" x="202" y="566.5" width="192" height="20.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -65,15 +57,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niz-Xz-9V9">
+                                <rect key="frame" x="202" y="523" width="192" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="jBF-DW-J4R"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="MSM-9Q-pbQ"/>
                     <connections>
                         <outlet property="countLabel" destination="zyy-fF-MeI" id="3bG-OJ-bKz"/>
                         <outlet property="dayLabel" destination="niz-Xz-9V9" id="SW6-7H-pTc"/>
+                        <outlet property="lastQuitDay" destination="IPw-30-3un" id="21q-Ns-Gtj"/>
+                        <outlet property="quitLabel" destination="dCv-3B-0Rc" id="zTY-sO-B0I"/>
                         <outlet property="startButton" destination="yq6-z2-d4c" id="FEY-7G-P8B"/>
+                        <outlet property="totalQuitCount" destination="fee-L5-a1e" id="0ED-HO-9vm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -138,11 +141,15 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="Mil-dl-4aO"/>
+                        <viewLayoutGuide key="safeArea" id="D79-jj-HEV"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="0cP-ig-dwb" id="BpV-y8-4ge"/>
                         <outlet property="countLabel" destination="h6c-VV-8cm" id="pJW-rQ-3cb"/>
-                        <outlet property="homeButton" destination="0cP-ig-dwb" id="rCQ-iC-qIt"/>
+                        <outlet property="message" destination="Ye7-X4-mHb" id="Xf3-LL-dux"/>
+                        <outlet property="message2" destination="Mr4-k1-Tfv" id="BA9-zK-sAp"/>
+                        <outlet property="message3" destination="Xo3-yH-23B" id="USO-J5-1qW"/>
+                        <outlet property="quitCount" destination="aXy-dT-XHY" id="xlD-PG-yTJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iNa-Cg-Stq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -210,9 +217,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="dCI-OC-d7j"/>
+                        <viewLayoutGuide key="safeArea" id="Flo-4Z-drP"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="c11-yk-6BM" id="zEU-Cw-5O4"/>
                         <outlet property="beerImage" destination="wRs-P7-iXv" id="26Y-VE-ljc"/>
                         <outlet property="message" destination="55g-37-yoJ" id="SQV-KN-rjg"/>
                         <outlet property="nextButton" destination="4P4-VD-01X" id="N8a-YR-7L9"/>

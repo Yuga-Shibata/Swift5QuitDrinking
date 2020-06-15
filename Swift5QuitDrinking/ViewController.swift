@@ -10,16 +10,20 @@ import UIKit
 import Lottie
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var startButton: UIButton!
-    @IBOutlet weak var logButton: UIButton!
+    
+    
+    @IBOutlet weak var lastQuitDay: UILabel!
+    @IBOutlet weak var totalQuitCount: UILabel!
+    @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var quitLabel: UILabel!
+
     
     var userDefaults = UserDefaults.standard
     var animationView:AnimationView = AnimationView()
     var HomeCount = Int()
     
-    @IBOutlet weak var dayLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +37,7 @@ class ViewController: UIViewController {
         animation()
         addCount()
         addData()
+        responsive()
     }
     
     @IBAction func start(_ sender: Any) {
@@ -95,6 +100,69 @@ class ViewController: UIViewController {
         } else {
             dayLabel.text = getMaxSpeed.last?.last
         }
+    }
+    
+    // レスポンシブ化
+    func responsive(){
+        // iPadだったら
+        if view.frame.maxX >= 768{
+        // startButtonのレイアウトを指定
+        startButton.frame = CGRect(x: view.frame.maxX / 2 - 100, y: view.frame.maxY * 0.72, width: 200, height: 200)
+            // quitLabelのレイアウトを設定
+            quitLabel.frame = CGRect(x: view.frame.maxX / 2 - 100, y: view.frame.maxY * 0.85, width: 200, height: 200)
+        // totalQuitCountのレイアウトを設定
+            totalQuitCount.frame = CGRect(x: view.frame.maxX / 4 , y: view.frame.maxY * 0.68, width: 156, height: 30)
+        // lastQuitDayのレイアウトを設定
+            lastQuitDay.frame = CGRect(x: view.frame.maxX / 4, y: view.frame.maxY * 0.64, width: 156, height: 30)
+        // countLabelのレイアウト設定
+            countLabel.frame = CGRect(x: view.frame.maxX / 2, y: view.frame.maxY * 0.68, width: 156, height: 30)
+        // dayLabelのレイアウト設定
+            dayLabel.frame = CGRect(x: view.frame.maxX / 2, y: view.frame.maxY * 0.64, width: 156, height: 30)
+            
+        } else if view.frame.maxY == 812 {
+            // iPhone11Proだった場合
+            // startButtonのレイアウトを指定
+            startButton.frame = CGRect(x: view.frame.maxX / 2 - 150 / 2, y: view.frame.maxY * 0.73, width: 150, height: 150)
+            // quitLabelのレイアウトを設定
+            quitLabel.frame = CGRect(x: view.frame.maxX / 2 - 100, y: view.frame.maxY * 0.82, width: 200, height: 200)
+            // totalQuitCountのレイアウトを設定
+                totalQuitCount.frame = CGRect(x: 10 , y: view.frame.maxY * 0.68, width: 156, height: 30)
+            // lastQuitDayのレイアウトを設定
+                lastQuitDay.frame = CGRect(x: 10, y: view.frame.maxY * 0.62, width: 156, height: 30)
+            // countLabelのレイアウト設定
+                countLabel.frame = CGRect(x: view.frame.maxX / 2, y: view.frame.maxY * 0.68, width: 156, height: 30)
+            // dayLabelのレイアウト設定
+                dayLabel.frame = CGRect(x: view.frame.maxX / 2, y: view.frame.maxY * 0.62, width: 156, height: 30)
+        } else if view.frame.maxY == 736 {
+            // iPhone8Plusの場合
+            // startButtonのレイアウトを指定
+            startButton.frame = CGRect(x: view.frame.maxX / 2 - 150 / 2, y: view.frame.maxY * 0.73, width: 140, height: 140)
+            // quitLabelのレイアウトを設定
+            quitLabel.frame = CGRect(x: view.frame.maxX / 2 - 100, y: view.frame.maxY * 0.82, width: 200, height: 200)
+            // totalQuitCountのレイアウトを設定
+                totalQuitCount.frame = CGRect(x: 10 , y: view.frame.maxY * 0.68, width: 156, height: 30)
+            // lastQuitDayのレイアウトを設定
+                lastQuitDay.frame = CGRect(x: 10, y: view.frame.maxY * 0.63, width: 156, height: 30)
+            // countLabelのレイアウト設定
+                countLabel.frame = CGRect(x: view.frame.maxX / 2, y: view.frame.maxY * 0.68, width: 156, height: 30)
+            // dayLabelのレイアウト設定
+                dayLabel.frame = CGRect(x: view.frame.maxX / 2, y: view.frame.maxY * 0.63, width: 156, height: 30)
+        } else if view.frame.maxY == 667 {
+            // iPhone8 OR iPhonwSE
+            // startButtonのレイアウトを指定
+            startButton.frame = CGRect(x: view.frame.maxX / 2 - 150 / 2, y: view.frame.maxY * 0.73, width: 140, height: 140)
+            // quitLabelのレイアウトを設定
+            quitLabel.frame = CGRect(x: view.frame.maxX / 2 - 100, y: view.frame.maxY * 0.82, width: 200, height: 200)
+            // totalQuitCountのレイアウトを設定
+                totalQuitCount.frame = CGRect(x: 10 , y: view.frame.maxY * 0.68, width: 156, height: 30)
+            // lastQuitDayのレイアウトを設定
+                lastQuitDay.frame = CGRect(x: 10, y: view.frame.maxY * 0.63, width: 156, height: 30)
+            // countLabelのレイアウト設定
+                countLabel.frame = CGRect(x: view.frame.maxX / 2, y: view.frame.maxY * 0.68, width: 156, height: 30)
+            // dayLabelのレイアウト設定
+                dayLabel.frame = CGRect(x: view.frame.maxX / 2, y: view.frame.maxY * 0.63, width: 156, height: 30)
+        }
+        // iPhone11、ProMax用(何も記述しない)
     }
     
 

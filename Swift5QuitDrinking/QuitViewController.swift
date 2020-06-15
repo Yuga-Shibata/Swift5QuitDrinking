@@ -11,9 +11,10 @@ import WCLShineButton
 
 class QuitViewController: UIViewController {
     
-    @IBOutlet weak var message: UILabel!
     @IBOutlet weak var beerImage: WCLShineButton!
+    @IBOutlet weak var message: UILabel!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     
     var flag = false
     var back = false
@@ -33,6 +34,9 @@ class QuitViewController: UIViewController {
         nextButton.isEnabled = false
         // nextButtonを半透明にする
         nextButton.alpha = 0.5
+        
+        // レスポンシブ化
+        responsive()
         
     }
     
@@ -167,6 +171,52 @@ class QuitViewController: UIViewController {
         nextVC.logCount = LoaclCount
         }
     
+    // レスポンシブ化
+    func responsive(){
+        // iPadだったら
+        if view.frame.maxX >= 768{
+            // backButton
+            backButton.frame = CGRect(x: view.frame.maxX / 2 - 300, y: view.frame.maxY * 0.68, width: 200, height: 200)
+            // nextButton
+            nextButton.frame = CGRect(x: view.frame.maxX / 2 + 100, y: view.frame.maxY * 0.68, width: 200, height: 200)
+            // message
+            message.frame = CGRect(x: view.frame.maxX / 2 - 300, y: view.frame.maxY * 0.4, width: 600, height: 200)
+            // beerImage
+            beerImage.frame = CGRect(x: view.frame.maxX / 2 - 100, y: view.frame.maxY * 0.2, width: 200, height: 200)
+        } else if view.frame.maxY == 812 {
+            // iPhone11Proだった場合
+            // backButton
+            backButton.frame = CGRect(x: view.frame.maxX / 2 - 168.375, y: view.frame.maxY * 0.68, width: 150, height: 150)
+            // nextButton
+            nextButton.frame = CGRect(x: view.frame.maxX / 2 + 18.375, y: view.frame.maxY * 0.68, width: 150, height: 150)
+            // message
+            message.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.45, width: view.frame.maxX - 10, height: 200)
+            // beerImage
+            beerImage.frame = CGRect(x: view.frame.maxX / 2 - 100, y: view.frame.maxY * 0.2, width: 200, height: 200)
+        } else if view.frame.maxY == 736 {
+            // iPhone8Plusの場合
+            // backButton
+            backButton.frame = CGRect(x: view.frame.maxX / 2 - 168.375, y: view.frame.maxY * 0.68, width: 150, height: 150)
+            // nextButton
+            nextButton.frame = CGRect(x: view.frame.maxX / 2 + 18.375, y: view.frame.maxY * 0.68, width: 150, height: 150)
+            // message
+            message.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.4, width: view.frame.maxX - 10, height: 200)
+            // beerImage
+            beerImage.frame = CGRect(x: view.frame.maxX / 2 - 100, y: view.frame.maxY * 0.15, width: 200, height: 200)
+            
+        } else if view.frame.maxY == 667 {
+            // iPhone8 OR iPhonwSE
+            // backButton
+            backButton.frame = CGRect(x: view.frame.maxX / 2 - 168.375, y: view.frame.maxY * 0.68, width: 150, height: 150)
+            // nextButton
+            nextButton.frame = CGRect(x: view.frame.maxX / 2 + 18.375, y: view.frame.maxY * 0.68, width: 150, height: 150)
+            // message
+            message.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.4, width: view.frame.maxX - 10, height: 200)
+            // beerImage
+            beerImage.frame = CGRect(x: view.frame.maxX / 2 - 100, y: view.frame.maxY * 0.15, width: 200, height: 200)
+        }
+        // iPhone11、ProMax用(何も記述しない)
+    }
     
     }
 
