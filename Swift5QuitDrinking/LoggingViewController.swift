@@ -50,9 +50,9 @@ class LoggingViewController: UIViewController {
             // backButton
             backButton.frame = CGRect(x: view.frame.maxX / 2 - 100, y: view.frame.maxY * 0.72, width: 200, height: 200)
             // message3
-            message3.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.4, width: view.frame.maxX - 10, height: 200)
+            message3.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.5, width: view.frame.maxX - 10, height: 200)
             // message2
-            message2.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.3, width: view.frame.maxX - 10, height: 200)
+            message2.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.35, width: view.frame.maxX - 10, height: 200)
             // message
             message.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.2, width: view.frame.maxX - 10, height: 200)
             // countLabel
@@ -64,11 +64,11 @@ class LoggingViewController: UIViewController {
             // backButton
             backButton.frame = CGRect(x: view.frame.maxX / 2 - 150 / 2, y: view.frame.maxY * 0.72, width: 150, height: 150)
             // message3
-            message3.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.5, width: view.frame.maxX - 10, height: 200)
+            message3.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.45, width: view.frame.maxX - 10, height: 200)
             // message2
-            message2.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.375, width: view.frame.maxX - 10, height: 200)
+            message2.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.3, width: view.frame.maxX - 10, height: 200)
             // message
-            message.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.3, width: view.frame.maxX - 10, height: 200)
+            message.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.2, width: view.frame.maxX - 10, height: 200)
             // countLabel
             countLabel.frame = CGRect(x: view.frame.maxX / 2 + 40, y: view.frame.maxY * 0.175, width: 70, height: 40)
             // quitCount
@@ -78,11 +78,11 @@ class LoggingViewController: UIViewController {
             // backButton
             backButton.frame = CGRect(x: view.frame.maxX / 2 - 150 / 2, y: view.frame.maxY * 0.68, width: 150, height: 150)
             // message3
-            message3.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.5, width: view.frame.maxX - 10, height: 200)
+            message3.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.45, width: view.frame.maxX - 10, height: 200)
             // message2
-            message2.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.375, width: view.frame.maxX - 10, height: 200)
+            message2.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.275, width: view.frame.maxX - 10, height: 200)
             // message
-            message.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.3, width: view.frame.maxX - 10, height: 200)
+            message.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.15, width: view.frame.maxX - 10, height: 200)
             // countLabel
             countLabel.frame = CGRect(x: view.frame.maxX / 2 + 40, y: view.frame.maxY * 0.175, width: 70, height: 40)
             // quitCount
@@ -91,13 +91,13 @@ class LoggingViewController: UIViewController {
         } else if view.frame.maxY == 667 {
             // iPhone8 OR iPhonwSE
             // backButton
-            backButton.frame = CGRect(x: view.frame.maxX / 2 - 150 / 2, y: view.frame.maxY * 0.68, width: 150, height: 150)
+            backButton.frame = CGRect(x: view.frame.maxX / 2 - 150 / 2, y: view.frame.maxY * 0.7, width: 150, height: 150)
             // message3
-            message3.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.5, width: view.frame.maxX - 10, height: 200)
+            message3.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.425, width: view.frame.maxX - 10, height: 200)
             // message2
-            message2.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.375, width: view.frame.maxX - 10, height: 200)
+            message2.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.25, width: view.frame.maxX - 10, height: 200)
             // message
-            message.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.3, width: view.frame.maxX - 10, height: 200)
+            message.frame = CGRect(x: view.frame.maxX / 2 - (view.frame.maxX - 10)/2, y: view.frame.maxY * 0.15, width: view.frame.maxX - 10, height: 200)
             // countLabel
             countLabel.frame = CGRect(x: view.frame.maxX / 2 + 40, y: view.frame.maxY * 0.175, width: 70, height: 40)
             // quitCount
