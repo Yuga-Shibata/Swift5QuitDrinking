@@ -38,6 +38,8 @@ class ViewController: UIViewController {
         addCount()
         addData()
         responsive()
+        dayLabel.textColor = .black
+        countLabel.textColor = .black
     }
     
     @IBAction func start(_ sender: Any) {

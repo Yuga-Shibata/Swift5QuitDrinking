@@ -24,6 +24,7 @@ class LoggingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         countLabel.text = String(logCount)
+        countLabel.textColor = .black
         responsive()
         insertText()
     }
