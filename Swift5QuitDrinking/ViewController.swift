@@ -8,9 +8,9 @@
 
 import UIKit
 import Lottie
+import AVFoundation
 
-class ViewController: UIViewController {
-    
+class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     @IBOutlet weak var lastQuitDay: UILabel!
     @IBOutlet weak var totalQuitCount: UILabel!
@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     var userDefaults = UserDefaults.standard
     var animationView:AnimationView = AnimationView()
     var HomeCount = Int()
+    var audioPlayer: AVAudioPlayer!
     
     
     override func viewDidLoad() {
@@ -40,11 +41,13 @@ class ViewController: UIViewController {
         responsive()
         dayLabel.textColor = .black
         countLabel.textColor = .black
+        playMusic()
     }
     
     @IBAction func start(_ sender: Any) {
         // 画面遷移をする
 //        seni()
+        audioPlayer.play()
         
     }
 
@@ -167,6 +170,28 @@ class ViewController: UIViewController {
         // iPhone11、ProMax用(何も記述しない)
     }
     
+    // 音楽再生
+    func playMusic(){
+        // 再生するaudioファイルのパスを取得
+            let audioPath = Bundle.main.path(forResource: "touch", ofType: "mp3")!
+            let audioUrl = URL(fileURLWithPath: audioPath)
+            
+            
+            // audioを再生するplayerを作成する
+            
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: audioUrl)
+                // backgroundで再生する
+                try AVAudioSession.sharedInstance().setCategory(
+                .playback, mode: .default)
+            } catch let error as NSError {
+                print(error)
+                audioPlayer = nil
+            }
+        
+            audioPlayer.delegate = self
+            audioPlayer.prepareToPlay()
+    }
 
 
 }

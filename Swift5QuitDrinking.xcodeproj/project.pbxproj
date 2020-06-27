@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		65E10EDD26558B2EB2E616AC /* Pods_Swift5QuitDrinking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1824379601B156043768734A /* Pods_Swift5QuitDrinking.framework */; };
+		8218806C24A72BB200F8D33E /* success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8218806924A72BB100F8D33E /* success.mp3 */; };
+		8218806D24A72BB200F8D33E /* generation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8218806A24A72BB200F8D33E /* generation.mp3 */; };
+		8218806E24A72BB200F8D33E /* touch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8218806B24A72BB200F8D33E /* touch.mp3 */; };
 		825BB1A62489F7CD00121515 /* QuitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825BB1A52489F7CD00121515 /* QuitViewController.swift */; };
 		829712222489CD7B00CDA2F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829712212489CD7B00CDA2F9 /* AppDelegate.swift */; };
 		829712242489CD7B00CDA2F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829712232489CD7B00CDA2F9 /* SceneDelegate.swift */; };
@@ -24,6 +27,9 @@
 		061A356143EF93568FAC23DE /* Pods-Swift5QuitDrinking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5QuitDrinking.release.xcconfig"; path = "Target Support Files/Pods-Swift5QuitDrinking/Pods-Swift5QuitDrinking.release.xcconfig"; sourceTree = "<group>"; };
 		1824379601B156043768734A /* Pods_Swift5QuitDrinking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift5QuitDrinking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65DCA97FCC1EC6475CD19E14 /* Pods-Swift5QuitDrinking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5QuitDrinking.debug.xcconfig"; path = "Target Support Files/Pods-Swift5QuitDrinking/Pods-Swift5QuitDrinking.debug.xcconfig"; sourceTree = "<group>"; };
+		8218806924A72BB100F8D33E /* success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = success.mp3; sourceTree = "<group>"; };
+		8218806A24A72BB200F8D33E /* generation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = generation.mp3; sourceTree = "<group>"; };
+		8218806B24A72BB200F8D33E /* touch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = touch.mp3; sourceTree = "<group>"; };
 		825BB1A52489F7CD00121515 /* QuitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitViewController.swift; sourceTree = "<group>"; };
 		8297121E2489CD7B00CDA2F9 /* 禁酒記録.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "禁酒記録.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		829712212489CD7B00CDA2F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +95,9 @@
 				82BD804D248A41BE003CC014 /* LogViewController.swift */,
 				82BD804B248A4054003CC014 /* LoggingViewController.swift */,
 				8297122A2489CD7C00CDA2F9 /* Assets.xcassets */,
+				8218806B24A72BB200F8D33E /* touch.mp3 */,
+				8218806924A72BB100F8D33E /* success.mp3 */,
+				8218806A24A72BB200F8D33E /* generation.mp3 */,
 				8297122C2489CD7C00CDA2F9 /* LaunchScreen.storyboard */,
 				8297122F2489CD7C00CDA2F9 /* Info.plist */,
 			);
@@ -164,8 +173,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8297122E2489CD7C00CDA2F9 /* LaunchScreen.storyboard in Resources */,
+				8218806E24A72BB200F8D33E /* touch.mp3 in Resources */,
 				8297122B2489CD7C00CDA2F9 /* Assets.xcassets in Resources */,
 				829712292489CD7B00CDA2F9 /* Main.storyboard in Resources */,
+				8218806D24A72BB200F8D33E /* generation.mp3 in Resources */,
+				8218806C24A72BB200F8D33E /* success.mp3 in Resources */,
 				829712362489DC9200CDA2F9 /* beer.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

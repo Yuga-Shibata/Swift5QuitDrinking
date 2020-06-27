@@ -8,14 +8,16 @@
 
 import UIKit
 import WCLShineButton
+import AVFoundation
 
-class QuitViewController: UIViewController {
+class QuitViewController: UIViewController,   AVAudioPlayerDelegate {
     
     @IBOutlet weak var beerImage: WCLShineButton!
     @IBOutlet weak var message: UILabel!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
     
+    var audioPlayer: AVAudioPlayer!
     var flag = false
     var back = false
     var timer = Timer()
@@ -37,6 +39,7 @@ class QuitViewController: UIViewController {
         
         // レスポンシブ化
         responsive()
+        playMusic()
         
     }
     
@@ -47,6 +50,7 @@ class QuitViewController: UIViewController {
         print("追加後の配列:", addedData)
         print("配列の最後", addedData.last!)
         let text =  addedData.joined()
+        audioPlayer.play()
     }
     
    
@@ -218,5 +222,27 @@ class QuitViewController: UIViewController {
         // iPhone11、ProMax用(何も記述しない)
     }
     
+    // 音楽再生
+    func playMusic(){
+        // 再生するaudioファイルのパスを取得
+            let audioPath = Bundle.main.path(forResource: "success", ofType: "mp3")!
+            let audioUrl = URL(fileURLWithPath: audioPath)
+            
+            
+            // audioを再生するplayerを作成する
+            
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: audioUrl)
+                // backgroundで再生する
+                try AVAudioSession.sharedInstance().setCategory(
+                .playback, mode: .default)
+            } catch let error as NSError {
+                print(error)
+                audioPlayer = nil
+            }
+        
+            audioPlayer.delegate = self
+            audioPlayer.prepareToPlay()
     }
+}
 
