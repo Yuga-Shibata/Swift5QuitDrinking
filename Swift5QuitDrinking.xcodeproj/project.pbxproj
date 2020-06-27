@@ -25,7 +25,7 @@
 		1824379601B156043768734A /* Pods_Swift5QuitDrinking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift5QuitDrinking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65DCA97FCC1EC6475CD19E14 /* Pods-Swift5QuitDrinking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5QuitDrinking.debug.xcconfig"; path = "Target Support Files/Pods-Swift5QuitDrinking/Pods-Swift5QuitDrinking.debug.xcconfig"; sourceTree = "<group>"; };
 		825BB1A52489F7CD00121515 /* QuitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitViewController.swift; sourceTree = "<group>"; };
-		8297121E2489CD7B00CDA2F9 /* Swift5QuitDrinking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift5QuitDrinking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8297121E2489CD7B00CDA2F9 /* 禁酒記録.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "禁酒記録.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		829712212489CD7B00CDA2F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		829712232489CD7B00CDA2F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		829712252489CD7B00CDA2F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 		8297121F2489CD7B00CDA2F9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8297121E2489CD7B00CDA2F9 /* Swift5QuitDrinking.app */,
+				8297121E2489CD7B00CDA2F9 /* 禁酒記録.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,7 +122,7 @@
 			);
 			name = Swift5QuitDrinking;
 			productName = Swift5QuitDrinking;
-			productReference = 8297121E2489CD7B00CDA2F9 /* Swift5QuitDrinking.app */;
+			productReference = 8297121E2489CD7B00CDA2F9 /* 禁酒記録.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -373,15 +373,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KHJQ79WF55;
 				INFOPLIST_FILE = Swift5QuitDrinking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Makoto.Shibata;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "禁酒記録";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -395,15 +396,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KHJQ79WF55;
 				INFOPLIST_FILE = Swift5QuitDrinking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Makoto.Shibata;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "禁酒記録";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
